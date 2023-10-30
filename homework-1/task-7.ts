@@ -1,9 +1,9 @@
-// type aliases = {
-//   name: string;
-//   isGrant: boolean;
-// };
+type aliases = {
+  name: string;
+  isGrant: boolean;
+};
 
-const seperateStudents = (arr: { name: string; isGrant: boolean }[]): object => {
+const seperateStudents = (arr: aliases[]): object => {
   let obj: { grant: string[]; contract: string[] } = {
     grant: [],
     contract: [],
@@ -12,7 +12,7 @@ const seperateStudents = (arr: { name: string; isGrant: boolean }[]): object => 
     if (arr[i].isGrant) {
       obj.grant.push(arr[i].name);
     } else {
-      obj.contract.push(arr[i].name)
+      obj.contract.push(arr[i].name);
     }
   }
   return obj;

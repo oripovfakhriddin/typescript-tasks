@@ -1,4 +1,8 @@
-const changeObjToArr = (obj: object): string[] => {
+type given = {
+  [el: string]: number
+}
+
+const changeObjToArr = (obj: given): string[] => {
   let arr: string[] = [];
   let arr1 = Object.entries(obj);
   for (let i: number = 0; i < arr1.length; i++) {
@@ -11,6 +15,6 @@ const changeObjToArr = (obj: object): string[] => {
   return arr;
 };
 
-let obj = { a: 1, b: 2, c: 3 };
+let obj: given = { a: 1, b: 2, c: 3 };
 let result = changeObjToArr(obj);
 console.log(result);
